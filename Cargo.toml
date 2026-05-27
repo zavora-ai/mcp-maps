@@ -1,0 +1,21 @@
+[workspace]
+
+[package]
+name = "mcp-maps"
+version = "1.0.0"
+edition = "2024"
+description = "Maps & Geolocation MCP server — geocoding, reverse geocoding, routing, elevation, POI search (OpenStreetMap, OSRM, OpenTopoData)"
+license = "Apache-2.0"
+repository = "https://github.com/zavora-ai/mcp-maps"
+keywords = ["mcp", "maps", "geocoding", "routing", "openstreetmap"]
+categories = ["api-bindings"]
+
+[dependencies]
+adk-mcp-sdk = "0.1"
+rmcp = { version = "1.7", features = ["server", "transport-io", "macros"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", default-features = false, features = ["json", "rustls-tls"] }
+anyhow = "1"
+urlencoding = "2"

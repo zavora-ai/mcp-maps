@@ -1,0 +1,60 @@
+server_id = "mcp_maps"
+display_name = "Maps"
+version = "1.0.0"
+domain = "geolocation"
+sdk_version = "0.1.0"
+risk_level = "low"
+writes_allowed = "none"
+transports = ["stdio"]
+credentials = []
+governance_gates = []
+environments = ["development", "staging", "production"]
+
+[[tools]]
+name = "geocode"
+description = "Geocode address to coordinates"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "reverse_geocode"
+description = "Reverse geocode coordinates to address"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_route"
+description = "Calculate route with directions"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_elevation"
+description = "Get elevation for coordinates"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "search_poi"
+description = "Search points of interest nearby"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "distance_matrix"
+description = "Distance matrix between multiple points"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_timezone"
+description = "Get timezone/country for coordinates"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
